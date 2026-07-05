@@ -386,7 +386,7 @@ class DbExtractor(overlapper.DbMatcher):
 		df = pd.DataFrame.from_records(records)
 		df = df.sort_values(['Group', 'Subgrp'])
 		df = df.fillna('none')  # replace np.nan
-		df['Group'] = df['Group'].astype(str).str.split('.', 1, expand=True)
+		df['Group'] = df['Group'].astype(str).str.split('.', n=1).str[0]
 		print(df)
 		self.dfOverlaps = df
 		if fn_prog:

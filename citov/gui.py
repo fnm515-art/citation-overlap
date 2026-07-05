@@ -165,6 +165,9 @@ class CiteOverlapHandler(Handler):
 					# enable opening links in an external browser in help doc
 					# editor, a QTextBrowser if QtWebEngine is not available
 					ed.control.setOpenExternalLinks(True)
+		return True
+	
+
 	
 	@staticmethod
 	def getSheetsTabWidget(info):
